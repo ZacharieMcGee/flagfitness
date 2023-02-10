@@ -36,3 +36,13 @@ $font-body: 'Fira Sans'; */
 a {
   text-decoration: none;
 }
+
+a:active,
+a:focus {
+  background-color: none;
+  color: inherit;
+}
+
+html {
+  background-color: gray;
+}
