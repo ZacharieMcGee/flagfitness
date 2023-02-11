@@ -6,7 +6,7 @@ import { LandingPage, ExercisesPage, CalculatorsPage, BMI_Page } from './pages'
 function App() {
 
   return (
-    <>
+    <div style={{ position: 'relative' }}>
       <Navbar />
       <main>
         <Routes>
@@ -17,7 +17,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
 
