@@ -2,6 +2,7 @@
   position: fixed;
   top: 0;
   left: 50%;
+  z-index: 10;
   transform: translateX(-50%);
   width: 100%;
   max-width: 1300px;
@@ -19,7 +20,7 @@
 .navbar-flex_links {
   position: absolute;
   top: -18px;
-  right: -20px;
+  /* right: -20px; */
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -32,18 +33,31 @@
   background-color: rgba(2,1,1, .85);
   border-bottom-left-radius: 25px;
 
-  /* animation: slideIn .3s forwards ease-out; */
+  
+}
+
+.show-navbar {
+  right: -320px;
+  animation: slideIn .25s forwards ease-out;
 }
 
 .hide-navbar {
-  right: -320px;
+  right: -20px;
+  animation: slideOut .25s forwards ease-out;
+
 }
 
-/* @keyframes slideIn {
+@keyframes slideIn {
   to {
     right: -20px;
   }
-} */
+}
+
+@keyframes slideOut {
+  to {
+    right: -320px;
+  }
+}
 
 .navbar-flex_links-link {
   color: var(--main-color);
