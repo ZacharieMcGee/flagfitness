@@ -44,6 +44,8 @@ a:focus {
   color: inherit;
 }
 
-html {
+html,
+body {
+  overflow-x: hidden;
   background-color: gray;
 }
