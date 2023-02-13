@@ -49,3 +49,7 @@ body {
   overflow-x: hidden;
   background-color: gray;
 }
+
+body {
+  overflow: hidden;
+}

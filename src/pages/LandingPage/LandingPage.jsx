@@ -4,7 +4,7 @@ import { GiBiceps, GiMeat } from 'react-icons/gi'
 import './LandingPage.css'
 import HeroCard from '../../assets/hero-card.png'
 import HeroDetail from '../../assets/hero-detail.png'
-import { Button1, ContentSubcard } from '../../components'
+import { Button1, ContentSubcard, Footer } from '../../components'
 
 
 
@@ -96,7 +96,9 @@ const LandingPage = () => {
 
         <div className='content-section_card tape'></div>
       </div>
-        
+
+      <Footer />
+      
     </div>
   )
 }

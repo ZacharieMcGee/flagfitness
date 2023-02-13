@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 
-import { Navbar, Footer } from './components'
+import { Navbar } from './components'
 import { LandingPage, ExercisesPage, CalculatorsPage, BMI_Page } from './pages'
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
           <Route path={`${import.meta.env.BASE_URL}bmi`} element={<BMI_Page />}/>
         </Routes>
       </main>
-      <Footer />
+  
     </div>
   )
 }
