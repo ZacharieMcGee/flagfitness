@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
+import { GiBiceps, GiMeat } from 'react-icons/gi'
 
 import './LandingPage.css'
 import HeroCard from '../../assets/hero-card.png'
 import HeroDetail from '../../assets/hero-detail.png'
-import { ContentCard1, Button1 } from '../../components'
+import { Button1, ContentSubcard } from '../../components'
+
 
 
 const LandingPage = () => {
@@ -32,7 +34,7 @@ const LandingPage = () => {
           <img className='hero-section_detail-img' src={HeroDetail} alt='#' />
         </div>
       </div>
-
+{/* 
       <div className='content-section'>
         <ContentCard1 type={1}/>
         <ContentCard1 type={2}/>
@@ -43,6 +45,56 @@ const LandingPage = () => {
         <ContentCard1 type={4}/>
         <ContentCard1 type={2}/>
         <ContentCard1 type={1}/>
+      </div> */}
+
+      <div className='content-section section-1'>
+        <div className='content-section_card'>
+          <h3>Qorem ipsum  sit amet, consectetur.</h3>
+          <p>Yorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. 
+          <br /><br />
+          Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas.</p>
+          <Button1 text={'exercises'}/>
+        </div>
+
+        <div className='content-section_card' >
+          <ContentSubcard 
+            title={'Vorem consectetur'}
+            text={'Norem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan.'}
+            icon={<GiBiceps />}
+          />
+          <ContentSubcard 
+            title={'Sorem ipsum'}
+            text={'Norem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan.'}
+            icon={<GiMeat />}
+          />
+        </div>
+
+        <div className='content-section_card pullup'></div>
+      </div>
+
+      <div className='content-section section-2'>
+        <div className='content-section_card' style={{ color: 'white' }}>
+          <h3>Qorem ipsum  sit amet, consectetur.</h3>
+          <p>Yorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. 
+          <br /><br />
+          Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas.</p>
+          <Button1 text={'exercises'}/>
+        </div>
+
+        <div className='content-section_card' >
+          <ContentSubcard 
+            title={'Vorem consectetur'}
+            text={'Norem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan.'}
+            icon={<GiBiceps />}
+          />
+          <ContentSubcard 
+            title={'Sorem ipsum'}
+            text={'Norem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan.'}
+            icon={<GiMeat />}
+          />
+        </div>
+
+        <div className='content-section_card tape'></div>
       </div>
         
     </div>
