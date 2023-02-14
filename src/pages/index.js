@@ -1,4 +1,5 @@
 export { default as LandingPage } from './LandingPage/LandingPage'
 export { default as ExercisesPage } from './ExercisesPage/ExercisesPage'
+export { default as ExerciseDetailPage } from './ExerciseDetailPage/ExerciseDetailPage'
 export { default as CalculatorsPage } from './CalculatorsPage'
 export { default as BMI_Page } from './BMI_Page'

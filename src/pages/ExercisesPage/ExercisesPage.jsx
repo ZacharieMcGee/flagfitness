@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { HiMagnifyingGlass } from 'react-icons/hi2'
 
 import { fetchData } from '../../../utils/fetchData.js'
-import { ExerciseCard } from '../../components'
+import { ExerciseCard, ExerciseCardSkeleton } from '../../components'
 
 const ExercisesPage = () => {
   const [searchTerm, setSearchTerm] = useState('')
@@ -62,8 +62,12 @@ const ExercisesPage = () => {
 
       <div className='exercise-page_grid'>
         { 
-          currentExercises?.map(exercise => (
+          currentExercises 
+          ? currentExercises.map(exercise => (
             <ExerciseCard exercise={exercise} key={exercise.id}/>
+          ))
+          : Array.from({length: 15}, (_, idx) => (
+            <ExerciseCardSkeleton key={idx}/>
           ))
         }
       </div>
