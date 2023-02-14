@@ -1,11 +1,6 @@
 .hero-section {
   position: relative;
-  background-image: 
-    radial-gradient(
-      circle at top, 
-      var(--bg-color-1) 30%, 
-      var(--bg-color-2) 75%);
-
+  background-image: var(--bg-gradient-1);
   height: 60vh;
 }
 

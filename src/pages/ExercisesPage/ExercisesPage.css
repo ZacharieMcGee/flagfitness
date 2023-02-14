@@ -1,0 +1,6 @@
+.exercises-page {
+  width: 100%;
+  height: 100vh; 
+  /* tempt */
+  background-image: var(--bg-gradient-1);
+}

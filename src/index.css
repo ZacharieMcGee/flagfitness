@@ -18,6 +18,11 @@ $font-body: 'Fira Sans'; */
     --main-color: #ED9D06;
     --bg-color-1: #020101;
     --bg-color-2: #262423;
+    --bg-gradient-1: 
+      radial-gradient(
+        circle at top, 
+        var(--bg-color-1) 30%, 
+        var(--bg-color-2) 75%);
 
     --font-header: 'East Sea Dokdo';
     --font-subtitle: 'Coda';
