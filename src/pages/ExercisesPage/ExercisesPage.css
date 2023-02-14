@@ -82,6 +82,15 @@
   gap: 20px;
 }
 
+@media screen and (min-width: 640px) {
+  .exercise-page_grid {
+    margin: 0 auto;
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .exercises-page_search h1 {
     font-size: 64px;
@@ -90,5 +99,21 @@
   .exercises-page_search-bar {
     height: 40px;
     max-width: 500px;
+  }
+
+  .exercise-page_grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .exercise-page_grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .exercise-page_grid {
+    grid-template-columns: repeat(16, 1fr);
   }
 }

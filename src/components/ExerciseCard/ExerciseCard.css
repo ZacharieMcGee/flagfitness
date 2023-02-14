@@ -1,21 +1,23 @@
 .exercise-card {
   overflow: hidden;
   max-width: 300px;
+  margin: 0 auto;
   /* background-color: salmon; */
   transform: skewX(-3deg);
   border-radius: 5px;
   transition: all .2s ease-out;
+  text-align: center;
   
 }
 
 .exercise-card:hover {
   transform: skewX(-3deg) scale(1.02);
-  
+
 }
 
 .exercise-card_content {
   
-  text-align: center;
+
 }
 
 .exercise-card_content img {
@@ -33,6 +35,7 @@
   font-size: 1.2em;
   letter-spacing: .05em;
   color: white;
+  height: 50px;
 }
 
 .exercise-card_content-chips {
@@ -44,7 +47,7 @@
 
 .exercise-card_content-chips_chip {
   flex: 1;
-  padding: .4em 1em;
+  padding: .4em 0;
   color: var(--main-color);
   background-color: var(--bg-color-1);
   border-radius: 5px;
@@ -52,4 +55,14 @@
   
   font-family: var(--font-body);
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 1366px) {
+  .exercise-card {
+    grid-column: span 3;
+  }
+
+  .exercise-card:nth-child(6) {
+    grid-column: 2 / span 3;
+  }
 }
