@@ -6,9 +6,8 @@ import { fetchData } from '../../../utils/fetchData.js'
 import { ExerciseCard } from '../../components'
 
 const ExercisesPage = () => {
-  const [exercises, setExercises] = useState(null)
   const [searchTerm, setSearchTerm] = useState('')
-
+  const [exercises, setExercises] = useState(null)
 
   console.log(exercises);
 
@@ -27,6 +26,14 @@ const ExercisesPage = () => {
       console.log('search for', searchTerm)
     }
   }
+
+  //Pagination
+  const [currentPage, setcurrentPage] = useState(1)
+  const exercisesPerPage = 15;
+
+  const indexOfLastExercise = currentPage * exercisesPerPage;
+  const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
+  const currentExercises = exercises?.slice(indexOfFirstExercise, indexOfLastExercise);
 
   return (
     <div className='exercises-page'>
@@ -55,8 +62,8 @@ const ExercisesPage = () => {
 
       <div className='exercise-page_grid'>
         { 
-          exercises?.map(exercise => (
-            <ExerciseCard exercise={exercise}/>
+          currentExercises?.map(exercise => (
+            <ExerciseCard exercise={exercise} key={exercise.id}/>
           ))
         }
       </div>
