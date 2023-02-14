@@ -11,7 +11,7 @@ const Footer = () => {
   const baseUrl = import.meta.env.BASE_URL
 
   return (
-    <div className='footer'>
+    <footer className='footer'>
       <div className='footer-flex'>
         <Link className='footer-flex_logo' to={`${baseUrl}`}>
           <img className='footer-flex_logo-img' src={LogoLg} alt='logo' />
@@ -32,7 +32,7 @@ const Footer = () => {
       </div>
 
       <p> &copy; FlagFitness | All Rights Reserved</p>
-    </div>
+    </footer>
   )
 }
 

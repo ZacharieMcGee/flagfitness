@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 50%;
-  z-index: 10;
+  z-index: 100;
   transform: translateX(-50%);
   width: 100%;
   max-width: 1300px;
@@ -25,12 +25,12 @@
   flex-direction: column;
   align-items: flex-end;
   text-align: right;
-  gap: 10px;
+  gap: 20px;
 
   padding: 20px 20px 20px 0;
 
   width: 300px;
-  background-color: rgba(2,1,1, .85);
+  background-color: rgba(2,1,1, .95);
   border-bottom-left-radius: 25px;
 }
 
@@ -83,6 +83,7 @@
 }
 
 .navbar-flex_logo-img {
+  display: block;
   max-width: 100%;
   height: auto;
 }

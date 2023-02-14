@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { GiBiceps, GiMeat } from 'react-icons/gi'
+import { IoScaleSharp, IoCalculatorSharp } from 'react-icons/io5'
 
 import './LandingPage.css'
 import HeroCard from '../../assets/hero-card.png'
@@ -34,18 +35,6 @@ const LandingPage = () => {
           <img className='hero-section_detail-img' src={HeroDetail} alt='#' />
         </div>
       </div>
-{/* 
-      <div className='content-section'>
-        <ContentCard1 type={1}/>
-        <ContentCard1 type={2}/>
-        <ContentCard1 type={3}/>
-      </div>
-
-      <div className='content-section'>
-        <ContentCard1 type={4}/>
-        <ContentCard1 type={2}/>
-        <ContentCard1 type={1}/>
-      </div> */}
 
       <div className='content-section section-1'>
         <div className='content-section_card'>
@@ -85,19 +74,19 @@ const LandingPage = () => {
           <ContentSubcard 
             title={'Vorem consectetur'}
             text={'Norem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan.'}
-            icon={<GiBiceps />}
+            icon={<IoScaleSharp />}
           />
           <ContentSubcard 
             title={'Sorem ipsum'}
             text={'Norem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan.'}
-            icon={<GiMeat />}
+            icon={<IoCalculatorSharp />}
           />
         </div>
 
         <div className='content-section_card tape'></div>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
       
     </div>
   )

@@ -25,14 +25,15 @@
 }
 
 .content-card_subcard-flex_icon {
-  background-color: var(--main-color);
-  border-radius: 50%;
-  min-width: 60px;
-  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--bg-color-1);
+  background-color: var(--main-color);
+  transform: skewX(3deg);
+  border-radius: 50%;
+  min-width: 60px;
+  height: 60px;
   font-size: 30px;
 }
 
