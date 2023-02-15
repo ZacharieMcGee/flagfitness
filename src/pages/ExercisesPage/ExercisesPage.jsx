@@ -2,7 +2,7 @@ import './ExercisesPage.css'
 import { useState, useEffect } from 'react'
 import { HiMagnifyingGlass } from 'react-icons/hi2'
 
-import { fetchData } from '../../../utils/fetchData.js'
+import { fetchData } from '../../utils/fetchData.js'
 import { ExerciseCard, ExerciseCardSkeleton } from '../../components'
 
 const ExercisesPage = () => {

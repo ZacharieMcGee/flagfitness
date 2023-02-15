@@ -1,6 +1,12 @@
 import { useState } from 'react'
 
+import { IoBodySharp, IoBedSharp, IoScaleSharp, IoHeartSharp } from 'react-icons/io5'
+import { FaPercentage } from 'react-icons/fa'
+import { BiHourglass } from 'react-icons/bi'
+import { SlEnergy } from 'react-icons/sl'
+
 import './CalculatorsPage.css'
+// import calculators from '../../utils/constants.js'
 import { BMI } from '../../components'
 
 const CalculatorsPage = () => {
@@ -8,26 +14,60 @@ const CalculatorsPage = () => {
   const [calcToShow, setCalcToShow] = useState('body mass index')
 
   const calculators = [
-    'body mass index',
-    'basal metabolic rate',
-    'body fat percentage',
-    'ideal body weight',
-    'waist-hip ratio',
-    'a body shape index',
-    'total daily energy expenditure'
+    {
+      name: 'body mass index',
+      icon: <IoBodySharp />,
+    },
+    {
+      name: 'basal metabolic rate',
+      icon: <IoBedSharp />,
+    },
+    {
+      name: 'body fat percentage',
+      icon: <FaPercentage />,
+    },
+    {
+      name: 'ideal body weight',
+      icon: <IoScaleSharp />,
+    },
+    {
+      name: 'waist-hip ratio',
+      icon: <BiHourglass />,
+    },
+    {
+      name: 'a body shape index',
+      icon: <IoHeartSharp />,
+    },
+    {
+      name: 'total daily energy expenditure',
+      icon: <SlEnergy />,
+    },
   ]
+
+  const showCalculatorHandler = (calc) => {
+    setCalcToShow(calc.name);
+    window.scrollTo({top: '1200px', behavior: 'smooth'})
+  }
 
   return (
     <div className='calculators-page'>
       <div className='calculator-page_selection'>
         <h1>Calculators</h1>
-        {
-          calculators.map(calc => {
-            <button onClick={() => setCalcToShow(calc)}>
-              {calc}
-            </button>
-          })
-        }
+        <div className='calculator-page_selection-btns'>
+          {
+            calculators.map((calc, idx) => (
+              <button 
+                onClick={() => showCalculatorHandler(calc)}
+                key={idx}
+              > 
+              <div className='calculator-page_selection-btns-btn_icon'>
+                {calc.icon}
+              </div>
+                {calc.name}
+              </button>
+            ))
+          }
+        </div>
       </div>
 
       <div className='calculator-page_calc'>
