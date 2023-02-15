@@ -1,10 +1,15 @@
 import React from 'react'
 
-import './ABSI.css'
+import { CalculatorInfoCard } from '../../components'
 
 const ABSI = () => {
   return (
-    <div>ABSI</div>
+    <div>
+      <CalculatorInfoCard 
+        title={'A Body Shape Index'}
+        text={"The ABSI calculator estimates the risk of premature mortality based on the A Body Shape Index (ABSI). The ABSI formula requires only a few variables: age, sex, body height, body mass, and waist circumference."}
+      />
+    </div>
   )
 }
 

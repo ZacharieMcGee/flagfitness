@@ -58,3 +58,53 @@ body {
 body {
   overflow: hidden;
 }
+
+.calculator-container {
+  display: flex;
+  flex-direction: column-reverse;
+  max-width: 500px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.calculator {
+  background-color: var(--bg-color-1);
+  transform: skewX(-3deg);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.calculator form {
+  transform: skewX(3deg);
+}
+
+.calculator label {
+  font-family: var(--font-subtitle);
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  
+  color: #ED9D06;
+  
+}
+
+.calculator input {
+  display: block;
+  background: #FFFFFF;
+  border-radius: 5px;
+}
+
+@media screen and ( min-width: 768px ) {
+  .calculator-container {
+    max-width: 700px;
+  }
+}
+
+@media screen and ( min-width: 1024px ) {
+  .calculator-container {
+    max-width: 1300px;
+    flex-direction: row;
+  }
+}

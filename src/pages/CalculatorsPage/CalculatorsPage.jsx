@@ -7,7 +7,7 @@ import { SlEnergy } from 'react-icons/sl'
 
 import './CalculatorsPage.css'
 // import calculators from '../../utils/constants.js'
-import { BMI } from '../../components'
+import { BMI, BFP, BMR, IBW, WHR, ABSI, TDEE } from '../../components'
 
 const CalculatorsPage = () => {
 
@@ -46,7 +46,7 @@ const CalculatorsPage = () => {
 
   const showCalculatorHandler = (calc) => {
     setCalcToShow(calc.name);
-    window.scrollTo({top: '1200px', behavior: 'smooth'})
+    window.scrollTo({top: 1200, behavior: 'smooth'})
   }
 
   return (
@@ -70,7 +70,7 @@ const CalculatorsPage = () => {
         </div>
       </div>
 
-      <div className='calculator-page_calc'>
+      {/* <div className='calculator-page_calc'> */}
         {
           (() => {
             switch (calcToShow) {
@@ -86,7 +86,7 @@ const CalculatorsPage = () => {
           })()
         } 
        
-      </div>
+      {/* </div> */}
     </div>
   )
 }

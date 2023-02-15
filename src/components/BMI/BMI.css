@@ -1,0 +1,28 @@
+/* .calculator {
+  background-color: var(--bg-color-1);
+  transform: skewX(-3deg);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.calculator form {
+  transform: skewX(3deg);
+}
+
+.calculator label {
+  font-family: var(--font-subtitle);
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  
+  color: #ED9D06;
+  
+}
+
+.calculator input {
+  display: block;
+  background: #FFFFFF;
+  border-radius: 5px;
+} */

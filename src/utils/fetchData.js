@@ -47,6 +47,7 @@ export const fetchData = async (db, urlEnd) => {
 
   } else {
     let url = calcAPI.baseUrl + urlEnd;
+    console.log(url)
     response = await fetch(url, calcAPI.options)
       .then(data => data.json())
       .catch(err => console.log(err)); 
