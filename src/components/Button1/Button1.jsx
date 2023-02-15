@@ -7,7 +7,7 @@ const Button1 = ({ text }) => {
 
   return (
     <Link 
-      to={`${baseUrl}${text}}`}
+      to={`${baseUrl}${text}`}
       className='btn'
     >
       {text.toUpperCase()}

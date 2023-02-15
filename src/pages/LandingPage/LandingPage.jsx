@@ -7,8 +7,6 @@ import HeroCard from '../../assets/hero-card.png'
 import HeroDetail from '../../assets/hero-detail.png'
 import { Button1, ContentSubcard, Footer } from '../../components'
 
-
-
 const LandingPage = () => {
   
   return (
@@ -67,7 +65,7 @@ const LandingPage = () => {
           <p>Yorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. 
           <br /><br />
           Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas.</p>
-          <Button1 text={'exercises'}/>
+          <Button1 text={'calculators'}/>
         </div>
 
         <div className='content-section_card' >

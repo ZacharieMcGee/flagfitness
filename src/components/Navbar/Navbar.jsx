@@ -62,7 +62,7 @@ const Navbar = () => {
 
           <Link 
             className='navbar-flex_links-link' 
-            to={`${baseUrl}exercises`}
+            to={`${baseUrl}calculators`}
             onClick={showMenuHandler}
           >
             CALCULATORS
