@@ -5,6 +5,10 @@
   padding: 10px;
 }
 
+.calculator-info:not(:first-child) {
+  margin-top: 10px;
+}
+
 .calculator-info h2 {
   margin-bottom: 10px;
 

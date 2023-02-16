@@ -9,6 +9,7 @@ const Button1 = ({ text }) => {
     <Link 
       to={`${baseUrl}${text}`}
       className='btn'
+      onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
     >
       {text.toUpperCase()}
     </Link>

@@ -1,7 +1,7 @@
 import { useState } from 'react'
+
 import './BMI.css'
 import { CalculatorInfoCard } from '../../components'
-
 import { fetchData } from '../../utils/fetchData'
 
 const BMI = () => {
@@ -11,13 +11,6 @@ const BMI = () => {
   const [bmi, setBmi] = useState(0)
   const [health, setHealth] = useState('')
   const [range, setRange] = useState('')
-
-  // const fetchExerciseData = async () => {
-  //   let exerciseData = await fetchData('ex', 'exercises')
-  //   setExercises(exerciseData)
-  // }
-
-  // fetchExerciseData();
 
   const calcSubmitHandler = e => {
     e.preventDefault()
@@ -35,10 +28,18 @@ const BMI = () => {
 
   return (
     <div className='calculator-container'>
-      <CalculatorInfoCard 
+
+      <div className='calculator-container_info'>
+        <CalculatorInfoCard 
+          title={'body mass index'}
+          text={'Body Mass Index (BMI) is a person’s weight in kilograms (or pounds) divided by the square of height in meters (or feet). A high BMI can indicate high body fatness. BMI screens for weight categories that may lead to health problems, but it does not diagnose the body fatness or health of an individual.'}
+        />
+        <CalculatorInfoCard 
         title={'body mass index'}
         text={'Body Mass Index (BMI) is a person’s weight in kilograms (or pounds) divided by the square of height in meters (or feet). A high BMI can indicate high body fatness. BMI screens for weight categories that may lead to health problems, but it does not diagnose the body fatness or health of an individual.'}
       />
+      </div>
+
       <div className='calculator'>
         <form onSubmit={calcSubmitHandler}>
           <label htmlFor='weight'>WEIGHT</label>
@@ -61,9 +62,20 @@ const BMI = () => {
           <button type='submit'>CALCULATE</button>
         </form>
 
-        {bmi}
-        {health}
-        {range}
+        <div className='calculator-results'>
+          <p>BMI:</p>
+          <p>{bmi}</p>
+        </div>
+        <div className='calculator-results'>
+          <p>Health:</p>
+          <p>{health}</p>
+        </div>
+        <div className='calculator-results'>
+          <p>Healthy Range:</p>
+          <p>{range}</p>
+        </div>
+        
+        
       </div>
     </div>
   )
