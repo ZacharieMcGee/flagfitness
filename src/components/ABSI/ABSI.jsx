@@ -21,7 +21,7 @@ const ABSI = () => {
      let { info:  { absi, absiZ, mortalityRisk } } = await fetchData('calc', `absi?weight=${weight}&height=${height}&waist=${waist}&age=${age}&gender=${gender}`)
     
      setAbsi(absi)
-     setAbsiZ(absi)
+     setAbsiZ(absiZ)
      setMortalityRisk(mortalityRisk)
     }
 
