@@ -43,7 +43,7 @@ const WHR = () => {
             name='waist' 
             type='number'  
             value={waist}
-            onChange={ e => setWeight(e.target.value) }
+            onChange={ e => setWaist(e.target.value) }
             required
           />
 
@@ -52,7 +52,7 @@ const WHR = () => {
             name='hip' 
             type='number'  
             value={hip}
-            onChange={ e => setHeight(e.target.value) }
+            onChange={ e => setHip(e.target.value) }
             required
           />
 

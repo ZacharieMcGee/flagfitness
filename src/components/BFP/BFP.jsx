@@ -13,16 +13,18 @@ const BFP = () => {
   const [bfp, setBfp] = useState(0)
   const [fatMass, setFatMass] = useState(0)
   const [leanMass, setLeanMass] = useState(0)
+  const [desc, setDesc] = useState('')
   
   const calcSubmitHandler = e => {
     e.preventDefault()
 
     const fetchBFP = async () => {
-     let { info:  { bfp, fat_mass, lean_mass }} = await fetchData('calc', `bfp?weight=${weight}&height=${height}&age=${age}&gender=${gender}`)
+     let { info:  { bfp, fat_mass, lean_mass, description }} = await fetchData('calc', `bfp?weight=${weight}&height=${height}&age=${age}&gender=${gender}`)
     
      setBfp(bfp)
      setFatMass(fat_mass)
      setLeanMass(lean_mass)
+     setDesc(description)
     }
 
     fetchBFP();
@@ -90,6 +92,10 @@ const BFP = () => {
         <div className='calculator-results'>
           <p>Lean Mass:</p>
           <p>{leanMass}</p>
+        </div>
+        <div className='calculator-results'>
+          <p>Health Status:</p>
+          <p>{desc}</p>
         </div>
       </div>
     </div>

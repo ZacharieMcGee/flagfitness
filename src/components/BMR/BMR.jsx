@@ -73,6 +73,7 @@ const BMR = () => {
             <option value='male'>male</option>
             <option value='female'>female</option>
           </select>
+          
           <button type='submit'>CALCULATE</button>
         </form>
 
