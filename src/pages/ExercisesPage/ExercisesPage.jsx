@@ -1,6 +1,7 @@
 import './ExercisesPage.css'
 import { useState, useEffect } from 'react'
 import { HiMagnifyingGlass } from 'react-icons/hi2'
+import { AiOutlineDoubleLeft, AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
 
 import { fetchData } from '../../utils/fetchData.js'
 import { ExerciseCard, ExerciseCardSkeleton } from '../../components'
@@ -27,13 +28,27 @@ const ExercisesPage = () => {
     }
   }
 
+  
   //Pagination
-  const [currentPage, setcurrentPage] = useState(1)
+  const [currentPage, setCurrentPage] = useState(1)
   const exercisesPerPage = 15;
+  
+  let numOfPages = Math.ceil(exercises?.length / exercisesPerPage);
+  let indexOfLastExercise = currentPage * exercisesPerPage;
+  let indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
+  let currentExercises = exercises?.slice(indexOfFirstExercise, indexOfLastExercise);
+  
+  const pageLeft = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1)
+    }
+  }
 
-  const indexOfLastExercise = currentPage * exercisesPerPage;
-  const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
-  const currentExercises = exercises?.slice(indexOfFirstExercise, indexOfLastExercise);
+  const pageRight = () => {
+    if (currentPage < numOfPages) {
+      setCurrentPage(currentPage + 1)
+    }
+  }
 
   return (
     <div className='exercises-page'>
@@ -70,6 +85,65 @@ const ExercisesPage = () => {
             <ExerciseCardSkeleton key={idx}/>
           ))
         }
+      </div>
+
+      <div className='exercise-page_pagination'>
+
+        {(currentPage !== 1) &&
+          <div 
+            className='exercise-page_pagination-icon arrow-left'
+            onClick={() => setCurrentPage(1)}
+          >
+            <AiOutlineDoubleLeft />
+          </div>
+        }
+
+        <div 
+          className='exercise-page_pagination-icon arrow-left'
+          onClick={pageLeft}
+        >
+          <AiOutlineLeft />
+        </div>
+
+        <div className='exercise-page_pagination-icon num'>
+          {currentPage}
+        </div>
+
+        {(currentPage + 1) < numOfPages &&
+          <div 
+            className='exercise-page_pagination-icon num'
+            onClick={() => currentPage + 1}
+          >
+            {currentPage + 1}
+          </div>
+        }
+
+        {(currentPage + 2) < numOfPages &&
+          <div 
+            className='exercise-page_pagination-icon num'
+            onClick={() => setCurrentPage(currentPage + 2)}
+          >
+            {currentPage + 2}
+          </div>
+        }
+
+        <div className='exercise-page_pagination-icon dots'>
+          ...
+        </div>
+
+        <div 
+          className='exercise-page_pagination-icon num'
+          onClick={() =>setCurrentPage(numOfPages)}
+        >
+          {numOfPages}
+        </div>
+
+        <div 
+          className='exercise-page_pagination-icon arrow-right'
+          onClick={pageRight}
+        >
+          <AiOutlineRight />
+        </div>
       </div>
     </div>
   )
