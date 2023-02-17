@@ -9,6 +9,7 @@ import { ExerciseCard, ExerciseCardSkeleton } from '../../components'
 const ExercisesPage = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const [exercises, setExercises] = useState(null)
+  const [searchedExercises, setSearchedExercises] = useState(null)
 
   console.log(exercises);
 
@@ -24,7 +25,15 @@ const ExercisesPage = () => {
   const searchHandler = e => {
     e.preventDefault()
     if (searchTerm) {  
-      console.log('search for', searchTerm)
+      const searchedExercises = exercises.filter(
+        exercise => exercise.name.toLowerCase().includes(searchTerm)
+        || exercise.target.toLowerCase().includes(searchTerm)
+        || exercise.equipment.toLowerCase().includes(searchTerm)
+        || exercise.bodyPart.toLowerCase().includes(searchTerm)
+      )
+
+      setSearchTerm('');
+      setExercises(searchedExercises);
     }
   }
 
@@ -41,12 +50,14 @@ const ExercisesPage = () => {
   const pageLeft = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1)
+      window.scrollTo({ top: 0, behavior: 'smooth' })
     }
   }
 
   const pageRight = () => {
     if (currentPage < numOfPages) {
       setCurrentPage(currentPage + 1)
+      window.scrollTo({ top: 0, behavior: 'smooth' })
     }
   }
 
@@ -92,7 +103,11 @@ const ExercisesPage = () => {
         {(currentPage !== 1) &&
           <div 
             className='exercise-page_pagination-icon arrow-left'
-            onClick={() => setCurrentPage(1)}
+            onClick={() => {
+              setCurrentPage(1)
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+            }
+          }
           >
             <AiOutlineDoubleLeft />
           </div>
@@ -112,7 +127,10 @@ const ExercisesPage = () => {
         {(currentPage + 1) < numOfPages &&
           <div 
             className='exercise-page_pagination-icon num'
-            onClick={() => currentPage + 1}
+            onClick={() => {
+              setCurrentPage(currentPage + 1)
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+            }}
           >
             {currentPage + 1}
           </div>
@@ -121,7 +139,10 @@ const ExercisesPage = () => {
         {(currentPage + 2) < numOfPages &&
           <div 
             className='exercise-page_pagination-icon num'
-            onClick={() => setCurrentPage(currentPage + 2)}
+            onClick={() => {
+              setCurrentPage(currentPage + 2)
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+            }}
           >
             {currentPage + 2}
           </div>
@@ -133,7 +154,10 @@ const ExercisesPage = () => {
 
         <div 
           className='exercise-page_pagination-icon num'
-          onClick={() =>setCurrentPage(numOfPages)}
+          onClick={() => {
+            setCurrentPage(numOfPages)
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+          }}
         >
           {numOfPages}
         </div>

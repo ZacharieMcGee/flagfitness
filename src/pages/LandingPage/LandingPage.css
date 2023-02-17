@@ -26,7 +26,6 @@
   backdrop-filter: blur(3px);
 }
 
-
 .hero-card_bg {
   position: absolute;
   z-index: -10;
@@ -255,6 +254,7 @@
   .hero-section::after {
     content: '';
     position: absolute;
+    z-index: 200;
     bottom: -89px;
     left: 10vw;
     background-image: url('../../assets/hero-man.png');

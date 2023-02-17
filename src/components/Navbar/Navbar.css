@@ -2,11 +2,14 @@
   position: fixed;
   top: 0;
   left: 50%;
-  z-index: 100;
+  z-index: 300;
   transform: translateX(-50%);
   width: 100%;
   max-width: 1300px;
-  padding: 18px 20px 0;
+  padding: 20px;
+  border-radius: 0 0 20px 20px;
+  background-color: rgba(2,1,1, .85);
+  box-shadow: 0 0 10px 5px rgba(2,1,1, .95);
 }
 
 .navbar-flex {
@@ -100,6 +103,8 @@
   height: 30px;
   background-color: var(--main-color);
   border-radius: 5px;
+  outline: none;
+  border: none;
 }
 
 .navbar-backdrop {

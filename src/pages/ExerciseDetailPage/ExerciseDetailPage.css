@@ -92,7 +92,7 @@
 }
 
 .exercise-page_videos-video {
-  width: 60vw;
+  width: 70vw;
   margin-top: 20px;
 }
 
@@ -135,9 +135,11 @@
   .exercise-page_videos-flex {
     flex-direction: row;
     justify-content: space-between;
+    gap: 15px;
+    padding: 0 15px;
   }
 
   .exercise-page_videos-video {
-    width: unset;
+    width: 100%;
   }
 }
