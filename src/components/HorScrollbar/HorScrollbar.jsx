@@ -1,34 +1,44 @@
-import React from 'react'
+import { useContext } from 'react'
 import { AiOutlineRight, AiOutlineLeft } from 'react-icons/ai'
+import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu'
 
 import './HorScrollbar.css'
 import { ExerciseCard } from '../../components'
 
+const LeftArrow = () => {
+  const { scrollPrev } = useContext(VisibilityContext);
+
+  return (
+    <div onClick={() => scrollPrev()} className="arrow">
+      <AiOutlineLeft />
+    </div>
+  );
+};
+
+const RightArrow = () => {
+  const { scrollNext } = useContext(VisibilityContext);
+
+  return (
+    <div onClick={() => scrollNext()} className="arrow">
+      <AiOutlineRight />
+    </div>
+  );
+};
+
 const HorScrollbar = ({ title, exercises }) => {
-  // console.log(exercises)
 
   return (
     <div className='horscrollbar'>
       <h2>{title}</h2>
-      <div className='horscrollbar-flex'>
-        <div 
-          className='horscrollbar-left'
-          onClick={() => {}}
-        >
-          <AiOutlineLeft />
-        </div>
-        <div className='horscrollbar-items'>
-          { 
-            exercises?.slice(0, 10)?.map(item => <ExerciseCard exercise={item} key={item.id} />)
-          }
-        </div>
-        <div 
-          className='horscrollbar-right'
-          onClick={() => {}}
-        >
-          <AiOutlineRight />
-        </div>
-      </div>
+      <ScrollMenu 
+        LeftArrow={LeftArrow} 
+        RightArrow={RightArrow} 
+        className='horscrollbar-flex'
+      >
+        { 
+          exercises?.slice(0, 10)?.map(item => <ExerciseCard exercise={item} key={item.id} />)
+        }
+      </ScrollMenu>
       
     </div>
   )

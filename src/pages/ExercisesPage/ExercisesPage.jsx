@@ -29,7 +29,7 @@ const ExercisesPage = () => {
   }
 
   
-  //Pagination
+  //Pagination 
   const [currentPage, setCurrentPage] = useState(1)
   const exercisesPerPage = 15;
   

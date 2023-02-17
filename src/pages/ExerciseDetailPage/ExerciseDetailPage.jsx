@@ -45,18 +45,26 @@ const ExerciseDetailPage = () => {
       <h1>{exercise?.name?.toUpperCase()}</h1>
 
       <div className='exercise-page_snippet'>
-        <img src={exercise?.gifUrl} alt={exercise?.name} />
+        <div style={{ backgroundImage: `url(${exercise?.gifUrl})`}} className='exercise-page_snippet-img'>
+          {/* <img src={exercise?.gifUrl} alt={exercise?.name} /> */}
+        </div>
         <div className='exercise-page_snippet-icons'>
           <div className='exercise-page_snippet-icons_icon'>
-            <IoBodySharp />
+            <div>
+              <IoBodySharp />
+            </div>
             <p>{exercise?.bodyPart?.toUpperCase()}</p>
           </div>
           <div className='exercise-page_snippet-icons_icon'>
-            <GiArcheryTarget />
+            <div>
+              <GiArcheryTarget />
+            </div>
             <p>{exercise?.target?.toUpperCase()}</p>
           </div>
           <div className='exercise-page_snippet-icons_icon'>
-            <BiDumbbell />
+            <div>
+              <BiDumbbell />
+            </div>
             <p>{exercise?.equipment?.toUpperCase()}</p>
           </div>
         </div>
@@ -70,24 +78,25 @@ const ExerciseDetailPage = () => {
       </div>
 
       <div className='exercise-page_videos'>
+        <h2>Related Videos</h2>
+        <div className='exercise-page_videos-flex'>
         {
           exerciseVideos.map((item, idx) => (
 
             <a 
             key={idx}
-            className='exercise-video'
+            className='exercise-page_videos-video'
             href={`http://www.youtube.com/watch?v=${item.video.videoId}`}
             target='_blank'
             rel='noreferrer'
           >
             <img src={item.video.thumbnails[0].url} alt={item.video.title} />
-            <div>
-              <p>{item.video.title}</p>
-              <p>{item.video.channelName}</p>
-            </div>
+            <p>{item.video.title}</p>
+            <p>{item.video.channelName}</p>
           </a>
           ))
         }
+        </div>
       </div>
 
       <HorScrollbar 
@@ -103,4 +112,4 @@ const ExerciseDetailPage = () => {
   )
 }
 
-export default ExerciseDetailPage
+export default ExerciseDetailPage 

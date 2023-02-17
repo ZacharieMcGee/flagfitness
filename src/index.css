@@ -59,6 +59,10 @@ body {
   overflow: hidden;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .calculator-container {
   display: flex;
   flex-direction: column-reverse;

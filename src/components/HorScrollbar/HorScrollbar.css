@@ -1,4 +1,4 @@
-.horscrollbar-flex { 
+/* .horscrollbar-flex { 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,14 +25,58 @@
   padding: 20px; 
   overflow-x: scroll;
   display: flex;
-  /* grid-template-columns: 1fr 1fr; */
-  /* grid-template-rows: 1fr; */
   gap: 15px;
   width: 70vw
  
 }
 
 .horscrollbar-items > * {
-    /* transform: skewX(-3deg); */
     min-width: 200px;
+} */
+
+.horscrollbar {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.horscrollbar h2 {
+  font-family: var(--font-subtitle);
+  color: var(--main-color);
+  font-size: 24px;
+  letter-spacing: .05em;
+  margin: 50px 0 20px;
+  padding: 0 10px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.arrow {
+  width: 30px;
+  height: 200px;
+  border-radius: 5px;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: skewX(-3deg);
+}
+
+.react-horizontal-scrolling-menu--inner-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.react-horizontal-scrolling-menu--item  {
+  padding: 10px;
+  min-width: 200px;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 1024px) {
+  .react-horizontal-scrolling-menu--item  {
+    min-width: 250px;
+    font-size: 16px;
+  }
 }
