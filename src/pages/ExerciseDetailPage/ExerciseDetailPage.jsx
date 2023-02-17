@@ -70,13 +70,6 @@ const ExerciseDetailPage = () => {
         </div>
       </div>
 
-      <div className='exercise-page_information'>
-        <CalculatorInfoCard 
-          title={'hello'}
-          text={'lorem'}
-        />
-      </div>
-
       <div className='exercise-page_videos'>
         <h2>Related Videos</h2>
         <div className='exercise-page_videos-flex'>

@@ -29,23 +29,8 @@
   width: 325px;
   height: 325px;
   margin: 0 auto;
-  box-shadow: inset 0px 0px 20px 2px #000000;
+  box-shadow: inset 0px 0px 15px 1px #000000;
 }
-
-/* .exercise-page_snippet-img img {
-  width: 100%;
-  height: auto;
-} */
-
-/* .exercise-page_snippet-img::after {
-  box-shadow: inset 3px 3px 10px 0 #000000;
-  content: '';
-  display: block;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  width: 100%;
-} */
 
 .exercise-page_snippet-icons {
   max-width: 400px;
@@ -79,7 +64,7 @@
 }
 
 .exercise-page_information {
-  max-width: 1300px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
