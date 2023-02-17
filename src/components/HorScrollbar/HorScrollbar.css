@@ -1,0 +1,38 @@
+.horscrollbar-flex { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  
+  margin-top: 30px;
+}
+
+.horscrollbar-left,
+.horscrollbar-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  min-width: 30px;
+  height: 200px;
+  background-color: var(--main-color);
+  transform: skewX(-3deg);
+  border-radius: 5px;
+}
+
+.horscrollbar-items {
+  padding: 20px; 
+  overflow-x: scroll;
+  display: flex;
+  /* grid-template-columns: 1fr 1fr; */
+  /* grid-template-rows: 1fr; */
+  gap: 15px;
+  width: 70vw
+ 
+}
+
+.horscrollbar-items > * {
+    /* transform: skewX(-3deg); */
+    min-width: 200px;
+}

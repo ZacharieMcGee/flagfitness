@@ -1,0 +1,6 @@
+.exercise-page {
+  width: 100%;
+  min-height: 107vh;
+  background-image: var(--bg-gradient-1);
+  padding-bottom: 175px;
+}
