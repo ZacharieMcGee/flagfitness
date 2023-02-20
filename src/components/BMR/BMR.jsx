@@ -1,6 +1,5 @@
 import { useState } from 'react'
 
-import './BMR.css'
 import { CalculatorInfoCard } from '../../components'
 import { fetchData } from '../../utils/fetchData'
 
@@ -35,7 +34,7 @@ const BMR = () => {
       </div>
       <div className='calculator'>
         <form onSubmit={calcSubmitHandler}>
-          <label htmlFor='weight'>WEIGHT</label>
+          <label htmlFor='weight'>WEIGHT (KG)</label>
           <input 
             name='weight' 
             type='number'  
@@ -44,7 +43,7 @@ const BMR = () => {
             required
           />
 
-          <label htmlFor='height'>HEIGHT</label>
+          <label htmlFor='height'>HEIGHT (CM)</label>
           <input 
             name='height' 
             type='number'  

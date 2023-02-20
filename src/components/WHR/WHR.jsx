@@ -1,6 +1,5 @@
 import { useState } from 'react'
 
-import './WHR.css'
 import { CalculatorInfoCard } from '../../components'
 import { fetchData } from '../../utils/fetchData'
 
@@ -38,7 +37,7 @@ const WHR = () => {
 
       <div className='calculator'>
         <form onSubmit={calcSubmitHandler}>
-          <label htmlFor='waist'>WAIST</label>
+          <label htmlFor='waist'>WAIST (CM)</label>
           <input 
             name='waist' 
             type='number'  
@@ -47,7 +46,7 @@ const WHR = () => {
             required
           />
 
-          <label htmlFor='hip'>HIP</label>
+          <label htmlFor='hip'>HIP (CM)</label>
           <input 
             name='hip' 
             type='number'  

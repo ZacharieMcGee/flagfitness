@@ -1,6 +1,5 @@
 import { useState } from 'react'
 
-import './IBW.css'
 import { CalculatorInfoCard } from '../../components'
 import { fetchData } from '../../utils/fetchData'
 
@@ -40,7 +39,7 @@ const IBW = () => {
       </div>
       <div className='calculator'>
         <form onSubmit={calcSubmitHandler}>
-          <label htmlFor='weight'>WEIGHT</label>
+          <label htmlFor='weight'>WEIGHT (KG)</label>
           <input 
             name='weight' 
             type='number'  
@@ -49,7 +48,7 @@ const IBW = () => {
             required
           />
 
-          <label htmlFor='height'>HEIGHT</label>
+          <label htmlFor='height'>HEIGHT (CM)</label>
           <input 
             name='height' 
             type='number'  
