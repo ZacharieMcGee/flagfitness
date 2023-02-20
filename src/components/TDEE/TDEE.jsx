@@ -29,7 +29,7 @@ const TDEE = () => {
       <div className='calculator-container_info'>
       <CalculatorInfoCard 
           title={'Total Daily Energy Expenditure'}
-          text={"Your Total Daily Energy Expenditure (TDEE) is an estimation of how many calories you burn per day when exercise is taken into account. It is calculated by first figuring out your Basal Metabolic Rate, then multiplying that value by an activity multiplier."}
+          text={"Total Daily Energy Expenditure (TDEE) is the total amount of energy that an individual expends in a day, including resting metabolic rate, physical activity, and the thermic effect of food. TDEE is an important metric for understanding and managing weight, as it provides an estimate of the number of calories that an individual needs to maintain their current weight."}
         />
       </div>
 

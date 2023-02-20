@@ -30,7 +30,7 @@ const BMR = () => {
       <div className='calculator-container_info'>
         <CalculatorInfoCard 
           title={'Basal Metabolic Rate'}
-          text={'The scientific term for body fat is "adipose tissue." Adipose tissue serves a number of important functions. Its primary purpose is to store lipids from which the body creates energy. In addition, it secretes a number of important hormones, and provides the body with some cushioning as well as insulation.'}
+          text={'Basal Metabolic Rate (BMR) is the number of calories that the body burns at rest to maintain basic bodily functions such as breathing, circulating blood, and regulating body temperature. BMR is important because it provides an estimate of the minimum number of calories a person needs to consume to sustain their current weight and prevent weight gain or loss. Knowing your BMR can be helpful when creating a weight loss or weight gain plan, as it allows you to calculate the number of calories you need to consume or burn through physical activity to reach your goals. BMR can also be affected by factors such as age, gender, and muscle mass, and may change over time due to changes in body composition or lifestyle habits.'}
         />
       </div>
       <div className='calculator'>

@@ -35,7 +35,7 @@ const IBW = () => {
       <div className='calculator-container_info'>
         <CalculatorInfoCard 
           title={'Ideal Body Weight'}
-          text={'The Ideal Weight Calculator computes ideal body weight (IBW) ranges based on height, gender, and age. The idea of finding the IBW using a formula has been sought after by many experts for a long time. Currently, there persist several popular formulas, and our Ideal Weight Calculator provides their results for side-to-side comparisons.'}
+          text={'Ideal Body Weight (IBW) is a weight range that is considered to be healthy for a particular height, age, and gender. It is important because it provides a target weight that can be used to maintain good health and reduce the risk of chronic diseases. A healthy weight can also improve physical appearance and athletic performance. However, it is important to note that the ideal body weight is a general guideline and does not take into account individual differences such as body composition or lifestyle factors. Additionally, focusing solely on achieving a certain number on the scale can be counterproductive and may lead to unhealthy habits or a negative body image. It is important to maintain a balanced approach to weight management, incorporating healthy eating habits, regular physical activity, and other lifestyle factors that promote overall health and well-being.'}
         />
       </div>
       <div className='calculator'>

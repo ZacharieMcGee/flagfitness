@@ -32,12 +32,8 @@ const BMI = () => {
       <div className='calculator-container_info'>
         <CalculatorInfoCard 
           title={'body mass index'}
-          text={'Body Mass Index (BMI) is a person’s weight in kilograms (or pounds) divided by the square of height in meters (or feet). A high BMI can indicate high body fatness. BMI screens for weight categories that may lead to health problems, but it does not diagnose the body fatness or health of an individual.'}
+          text={"BMI stands for Body Mass Index, and it is a measure of body fat based on a person's height and weight. It is important because it provides an estimate of a person's overall health and risk of developing certain health problems. A high BMI can indicate a higher risk of obesity, heart disease, diabetes, and other chronic health conditions. Conversely, a low BMI may indicate malnourishment or an underlying medical condition. While BMI is not a perfect measure of health, it can be a useful screening tool to help identify potential health issues and guide further assessment and treatment."}
         />
-        <CalculatorInfoCard 
-        title={'body mass index'}
-        text={'Body Mass Index (BMI) is a person’s weight in kilograms (or pounds) divided by the square of height in meters (or feet). A high BMI can indicate high body fatness. BMI screens for weight categories that may lead to health problems, but it does not diagnose the body fatness or health of an individual.'}
-      />
       </div>
 
       <div className='calculator'>

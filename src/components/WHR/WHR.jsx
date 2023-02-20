@@ -32,7 +32,7 @@ const WHR = () => {
       <div className='calculator-container_info'>
         <CalculatorInfoCard 
           title={'Waist-Hip Ratio'}
-          text={"The waist-hip ratio or waist-to-hip ratio (WHR) is the dimensionless ratio of the circumference of the waist to that of the hips. This is calculated as waist measurement divided by hip measurement (W/H). For example, a person with a 30″ (76 cm) waist and 38″ (97 cm) hips has a waist-hip ratio of about 0.78. The WHR has been used as an indicator or measure of health, fertility, and the risk of developing serious health conditions. WHR correlates with perceptions of physical attractiveness."}
+          text={"A Body Shape Index (ABSI) is a measure of body fat distribution that takes into account both height and waist circumference. It is calculated by dividing waist circumference by the square root of height and adjusting for weight. ABSI is important because it has been found to be a strong predictor of mortality and chronic diseases, even after accounting for other risk factors such as age, gender, and BMI."}
         />
       </div>
 

@@ -35,7 +35,7 @@ const BFP = () => {
       <div className='calculator-container_info'>
       <CalculatorInfoCard 
           title={'Body Fat Percentage'}
-          text={"Your Basal Metabolic Rate (BMR) is the number of calories you burn as your body performs basic (basal) life-sustaining function. Commonly also termed as Resting Metabolic Rate (RMR), which is the calories burned if you stayed in bed all day.  In either case, many utilize the basal metabolic rate formula to calculate their body's metabolism rate."}
+          text={"Body fat percentage refers to the proportion of fat tissue in the body compared to total body weight. It is an important measure of overall health and fitness. A high body fat percentage can be an indicator of increased risk of chronic health conditions such as heart disease, diabetes, and cancer. It can also impact physical appearance and athletic performance. Conversely, a low body fat percentage can also have negative effects on health, particularly if it is achieved through unhealthy practices such as severe calorie restriction or excessive exercise. Maintaining a healthy body fat percentage is important for overall health, and can be achieved through a combination of healthy eating habits, regular physical activity, and other lifestyle factors."}
         />
       </div>
       <div className='calculator'>

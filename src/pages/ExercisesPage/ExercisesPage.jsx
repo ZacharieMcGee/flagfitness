@@ -83,7 +83,7 @@ const ExercisesPage = () => {
             <HiMagnifyingGlass />
           </button>
         </form>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam labore natus facere numquam. Nesciunt explicabo repudiandae suscipit ut illum dolores esse odio nam a quidem, dolorum voluptas veniam.</p>
+        <p>Browse 1200+ exercises here and find exactly what you're looking for.</p>
       </div>
 
       <div className='exercise-page_grid'>
