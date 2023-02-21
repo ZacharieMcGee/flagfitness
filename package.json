@@ -1,7 +1,7 @@
 {
-  "homepage": "https://ZacharieMcGee.github.io/flagfitness/",
+  "homepage": "https://ZacharieMcGee.github.io/",
   "name": "flagfitness",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
